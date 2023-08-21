@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo da Forca</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body class="modo-noturno">
+    <div class="container-toggle">
+      <label class="trocar-modo" id="modoNoturno" onclick="alternarModo()">
+        <input type="checkbox" class="input-toggle" />
+        <span class="emojis radius"></span>
+      </label>
+    </div>
+    <h1>Jogo da Forca</h1>
+    <canvas id="boneco" width="200" height="250"></canvas>
+    <p id="palavra"></p>
+    <input
+      type="text"
+      id="entrada"
+      maxlength="1"
+      pattern="[A-Za-z]"
+      oninput="validarInput(this)"
+    />
+    <button onclick="tentarLetra()">Tentar</button>
+    <p id="tentativas"></p>
+    <p id="mensagem"></p>
+    <button id="jogarNovamente" onclick="location.reload()">
+      Jogar Novamente
+    </button>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
